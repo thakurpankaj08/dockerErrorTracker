@@ -1,0 +1,14 @@
+PROBLEM
+--------
+While running new container.
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:348: starting container process caused "exec: \"-d\": executable file not found in $PATH": unknown.
+
+DETAILS:
+
+AWS: t2.micro: with Public IP
+
+RESOLUTION:
+
+Issue with resources. Had to clean all the iages and older contains from Linux.
+docker rm <contianer ID>s
+docker rmi <image ID>s
